@@ -1,0 +1,25 @@
+inputs:
+  - type: command
+    spec:
+      exec: "/bin/echo"
+      args:
+        - "hello"
+        - "world"
+      sudo: false
+  - type: command
+    spec:
+      exec: "/bin/ls"
+      args:
+        - "/"
+      sudo: true
+  - type: file
+    spec:
+      path: "/tmp/mytestfile.txt"
+      encoding: "txt"
+  - type: command
+    spec:
+      exec: "/sbin/ping"
+      args:
+        - "-c 2"
+        - "www.heise.de"
+      sudo: false
