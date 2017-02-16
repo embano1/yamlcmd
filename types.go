@@ -14,3 +14,8 @@ type input struct {
 type inputs struct {
 	Ins []input `yaml:"inputs"`
 }
+
+// Semaphore is a counting semaphore to control exec.cmd parallelism
+type semaphore struct {
+	slots chan struct{}
+}
